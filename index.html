@@ -13,14 +13,32 @@
   <meta property="og:description" content="Safe, affordable and hassle-free relocation. Home Moving, Student Moves, Furniture Removal & Delivery across Ireland. Get your FREE quote today!" />
   <meta property="og:image" content="/assets/logo.jpg" />
   <meta property="og:url" content="https://swifttransport.ie" />
-  <link rel="icon" type="image/jpeg" href="/assets/logo.jpg" />
-  <link rel="apple-touch-icon" href="/assets/logo.jpg" />
+  <link rel="icon" type="image/jpeg" href="./assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="./assets/logo.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/style.css" />
+  <script>
+    // Fallback para Live Server (5500) sem Vite — carrega CSS compilado se Tailwind não foi processado
+    (function(){
+      // Tailwind aplica .hidden {display:none}. Se não estiver, Vite não rodou
+      var el = document.createElement('div');
+      el.className = 'hidden';
+      el.style.position = 'absolute';
+      document.documentElement.appendChild(el);
+      var isHidden = getComputedStyle(el).display === 'none';
+      el.remove();
+      if (!isHidden) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = './assets/fallback.css';
+        document.head.appendChild(link);
+      }
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -58,7 +76,7 @@
   <header id="header" class="sticky top-0 z-50 bg-white/80 border-b border-slate-100 transition-all">
     <div class="max-w-[1280px] mx-auto px-4 md:px-6 h-[72px] flex items-center justify-between gap-4">
       <a href="#" class="flex items-center gap-3 shrink-0">
-        <img src="/assets/logo.jpg" alt="Swift Transport logo" class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover ring-2 ring-slate-100 shadow-sm" width="44" height="44" />
+        <img src="./assets/logo.jpg" alt="Swift Transport logo" class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover ring-2 ring-slate-100 shadow-sm" width="44" height="44" />
         <div class="leading-tight">
           <p class="font-display font-extrabold tracking-tight text-[#7F1D1D] text-[17px] md:text-[18px] leading-none">SWIFT TRANSPORT</p>
           <p class="text-[11px] md:text-xs tracking-[0.18em] font-semibold text-[#DC2626] -mt-0.5">& SOLUTIONS</p>
@@ -139,7 +157,7 @@
           </div>
 
           <div class="mt-8 flex items-center gap-3 bg-white/10 backdrop-blur border border-white/10 rounded-2xl px-4 py-3 max-w-[420px]">
-            <img src="/assets/logo.jpg" alt="" class="w-10 h-10 rounded-full object-cover shrink-0" />
+            <img src="./assets/logo.jpg" alt="" class="w-10 h-10 rounded-full object-cover shrink-0" />
             <div class="text-sm leading-tight">
               <p class="font-semibold">Thinking about moving?</p>
               <p class="text-white/70 text-xs">Let us handle it for you — 63+ jobs on Instagram</p>
@@ -319,7 +337,7 @@
           <p class="text-slate-500 mt-3">Irish company, local team, hundreds of 5-star moves. We treat your home like our own.</p>
           <figure class="mt-6 rounded-[20px] overflow-hidden bg-white border border-slate-100 shadow-sm">
             <div class="aspect-[4/3] overflow-hidden relative">
-              <img src="/assets/team.jpg" alt="Samarone & Wladmyr — the team behind Swift Transport" class="w-full h-full object-cover" loading="lazy" />
+              <img src="./assets/team.jpg" alt="Samarone & Wladmyr — the team behind Swift Transport" class="w-full h-full object-cover" loading="lazy" />
               <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent p-4 pt-14">
                 <p class="text-white font-bold text-sm flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-[#DC2626] animate-pulse"></span> Samarone & Wladmyr</p>
                 <p class="text-white/90 text-xs">The team behind Swift</p>
@@ -354,7 +372,7 @@
             <p class="text-sm text-slate-500 mt-1">Professional, punctual and polite. We carry, load and assemble if needed.</p>
           </div>
           <div class="reveal bg-[#F8FAFC] border border-slate-100 rounded-[20px] p-6 sm:col-span-2 flex gap-4 items-center">
-            <img src="/assets/logo.jpg" alt="" class="w-12 h-12 rounded-full object-cover shrink-0 hidden sm:block" />
+            <img src="./assets/logo.jpg" alt="" class="w-12 h-12 rounded-full object-cover shrink-0 hidden sm:block" />
             <div>
               <p class="font-bold text-[#7F1D1D]">2,041 followers trust us</p>
               <p class="text-sm text-slate-500">63+ moves shared on Instagram — real photos, real clients. <a href="https://instagram.com/swifttransport" target="_blank" class="text-[#DC2626] font-semibold underline">@swifttransport</a></p>
@@ -454,7 +472,7 @@
           </div>
 
           <div class="mt-6 flex items-center gap-3 text-xs text-slate-500">
-            <img src="/assets/logo.jpg" alt="" class="w-8 h-8 rounded-full object-cover" />
+            <img src="./assets/logo.jpg" alt="" class="w-8 h-8 rounded-full object-cover" />
             <span>Follow our work on Instagram — <a href="https://instagram.com/swifttransport" target="_blank" class="font-semibold text-[#7F1D1D] underline">instagram.com/swifttransport</a> (63 posts)</span>
           </div>
         </div>
@@ -513,7 +531,7 @@
       <div class="grid md:grid-cols-12 gap-8">
         <div class="md:col-span-5">
           <a href="#" class="flex items-center gap-3">
-            <img src="/assets/logo.jpg" alt="Swift Transport logo" class="w-11 h-11 rounded-full object-cover ring-2 ring-white/10" width="44" height="44" />
+            <img src="./assets/logo.jpg" alt="Swift Transport logo" class="w-11 h-11 rounded-full object-cover ring-2 ring-white/10" width="44" height="44" />
             <span class="leading-tight">
               <span class="font-display font-extrabold tracking-tight text-white leading-none block">SWIFT TRANSPORT</span>
               <span class="text-xs tracking-[0.18em] font-semibold text-red-300">& SOLUTIONS</span>
@@ -561,6 +579,6 @@
     <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M19.05 4.91A9.816 9.816 0 0 0 12.02 2C6.54 2 2.07 6.46 2.07 10.94c0 1.58.41 3.12 1.2 4.48L2 22l6.75-1.77a9.86 9.86 0 0 0 3.27.56h.01c5.48 0 9.94-4.46 9.94-9.94 0-2.66-1.03-5.15-2.92-7.04Zm-7.03 15.2h-.01a8.17 8.17 0 0 1-4.17-1.14l-.3-.18-4 .05.05-3.89-.18-.3A8.3 8.3 0 0 1 2.78 10.94c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.24 8.24Zm6.84-6.17c-.37-.19-2.2-1.09-2.54-1.21-.34-.12-.59-.19-.84.19-.25.37-.96 1.21-1.18 1.46-.22.25-.44.28-.81.09-.37-.19-1.57-.58-2.99-1.84-1.11-.99-1.86-2.21-2.08-2.58-.22-.37-.02-.57.17-.76.17-.17.37-.44.56-.66.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.66-.09-.19-.84-2.02-1.15-2.77-.3-.72-.61-.62-.84-.63l-.72-.01c-.25 0-.66.09-1 .47-.34.37-1.31 1.28-1.31 3.12s1.34 3.62 1.53 3.87c.19.25 2.64 4.03 6.4 5.65.89.38 1.59.61 2.13.78.9.29 1.71.25 2.36.15.72-.11 2.2-.9 2.51-1.77.31-.87.31-1.62.22-1.77-.09-.15-.34-.25-.71-.44Z"/></svg>
   </a>
 
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>
